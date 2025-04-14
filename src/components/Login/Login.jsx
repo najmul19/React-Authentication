@@ -34,8 +34,11 @@ const Login = () => {
     }
     return (
         <div>
-            <button onClick={handleGoogleSignIn}>Login with Google</button>
-            <button onClick={handleSignOut}>Sign Out</button>
+            
+            {
+                user ? <button onClick={handleSignOut}>Sign Out</button>:
+                <button onClick={handleGoogleSignIn}>Login with Google</button>
+            }
             {
                 user && <div>
                     
